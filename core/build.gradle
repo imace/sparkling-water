@@ -21,7 +21,7 @@ dependencies {
       exclude(group: "org.apache.hadoop", module: "hadoop-client")
   }
 
-  // Spark 1.2.0 release
+  // Spark
   // - core
   compile "org.apache.spark:spark-core_${scalaBinaryVersion}:${sparkVersion}"
   // - SQL component
@@ -94,4 +94,3 @@ integTest {
     systemProperty "sparkling.assembly.jar", "${project(":sparkling-water-assembly").configurations.shadow.artifacts.file.join(',')}"
     systemProperty "sparkling.itest.jar", "${integTestJar.archivePath}"
 }
-
